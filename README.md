@@ -17,6 +17,7 @@ Projeto de tcc
 ## Stack utilizada
 
 **Front-end:** Nextjs, TailwindCSS
+
 **Back-end** Fiber
 
 ## Autores
