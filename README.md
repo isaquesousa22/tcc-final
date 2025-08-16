@@ -18,7 +18,7 @@ Projeto de tcc
 
 **Front-end:** Nextjs, TailwindCSS
 
-**Back-end** Fiber
+**Back-end:** Fiber
 
 ## Autores
 
