@@ -3,9 +3,6 @@
 
 Projeto de tcc
 
-## Stack utilizada
-
-**Front-end:** Nextjs, TailwindCSS
 
 ## Tarefas
 - [ ] Desenvolver Testes
@@ -16,6 +13,12 @@ Projeto de tcc
 - [ ] Desenvolver autenticação
 - [ ] Desenvolver telas do frontend
 - [ ] Conectar o frontend no backend
+
+## Stack utilizada
+
+**Front-end:** Nextjs, TailwindCSS
+**Back-end** Fiber
+
 ## Autores
 
 - [@Ranskyth](https://www.github.com/Ranskyth)
