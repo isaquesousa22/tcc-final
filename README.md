@@ -7,6 +7,15 @@ Projeto de tcc
 
 **Front-end:** Nextjs, TailwindCSS
 
+## Tarefas
+- [ ] Desenvolver Testes
+- [ ] Conexão com o banco de dados
+- [ ] Criar o banco de dados
+- [ ] Desenvolver a base Da api
+- [ ] Deselvolver todas as rotas da api
+- [ ] Desenvolver autenticação
+- [ ] Desenvolver telas do frontend
+- [ ] Conectar o frontend no backend
 ## Autores
 
 - [@Ranskyth](https://www.github.com/Ranskyth)
