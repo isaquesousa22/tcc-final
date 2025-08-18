@@ -7,3 +7,11 @@ services:
       - MYSQL_ROOT_PASSWORD=${PASSWORD}
     ports:
       - "3306:3306"
+  fiber:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3333:3333"
+    depends_on:
+      - mysql
