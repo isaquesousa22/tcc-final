@@ -18,6 +18,8 @@ export default function Home() {
           </a>
 
         </nav>
+
+
       </header>
 
       <main>
@@ -32,7 +34,7 @@ export default function Home() {
           <p className="mx-auto max-w-[700px] md:text-xl mt-4">Priorizamos em um futuro sustentável por meio de soluções inteligentes de reciclagem e gerenciamento de resíduos.</p>
        
           </div>
-          <button className="bg-[#D47156] w-[100] h-[50] border hover:bg-[#d47156c0] vertical-align">
+          <button className="bg-[#D47156] w-[100] h-[50] border-2 border-solid  hover:bg-[#d47156c0]">
             Começar 
           </button>
         </div>
