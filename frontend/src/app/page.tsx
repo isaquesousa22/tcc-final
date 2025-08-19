@@ -11,7 +11,6 @@ export default function Home() {
         <a href="">Services </a>
         <a href="">Why recicle </a>
         <a href="">About Us </a>
-
           </div>
           <button className="bg-[#D47156] w-[100] h-[50] border hover:bg-[#d47156c0]">
             Login
