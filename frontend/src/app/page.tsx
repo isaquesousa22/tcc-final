@@ -6,20 +6,11 @@ export default function Home() {
       <header className="p-5 bg-[#F5F5DC]">
         <nav className="flex justify-between">
           <div className="flex gap-5">
-<<<<<<< HEAD
         <a>EcoSolutinos</a>
         <a href="">Home</a>
         <a href="">Services </a>
         <a href="">Why recicle </a>
         <a href="">About Us </a>
-=======
-            <a>EcoSolutinos</a>
-            <a href="">Home</a>
-            <a href="">Services </a>
-            <a href="">Why recicle </a>
-            <a href="">About Us </a>
-
->>>>>>> 23e7abdc25142d7aa892bae095658cb7a93f4e42
           </div>
           <a href="" className="">
             Login
