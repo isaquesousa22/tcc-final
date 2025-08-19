@@ -37,6 +37,21 @@ export default function Home() {
             Começar 
           </button>
         </div>
+        <div className="w-full bg-[#D3DED6] py-20 ">
+           <div className="bg-[#F9F9EB] m-auto w-[600] h-[250px] rounded-xl p-2" >
+
+
+            <h1 className="text-center font-bold ">Our Services</h1>
+            <h2 className="py-4">Don't know what to do with your old electronics or bulky items? We can help.</h2>
+
+            <p className="text-justify py-3">Our platform helps you find the right place and method to dispose of your items responsibly. From a broken microwave to an old computer, we connect you with local centers equipped to handle your specific recycling needs.</p>
+
+            <button className="bg-[#D47156] w-[115] h-[50] rounded-xl">
+            Find Disposal Locations 
+            </button>
+
+           </div>
+        </div>
       </main>
 
       <footer>
