@@ -37,7 +37,6 @@ export default function Home() {
             Começar
           </button>
         </div>
-<<<<<<< HEAD
 
         <div className="w-screen pt-12 px-4 bg-[#F5F5DB] h-[400px]">
 
@@ -47,15 +46,33 @@ export default function Home() {
           <p >A reciclagem é uma das maneiras mais fáceis e eficazes de proteger o nosso planeta. Ela conserva recursos, economiza energia e reduz a poluição.</p>
       </div>
 
-      <div className="mx-auto grid max-w 5x1 items-start gap-8 my-30 sm:grid-cols 2 md:gap-12">
-        <div className="grid gap-1 text-center">
+
+      <div className="mx-auto items-start gap-8 my-30 2 md:gap-12">
+
+
+      <div className="grid grid-cols-4">
+        <div className="gap-1 text-center">
           <p className="font-bold text-[#080808] ">Conservar Recursos</p>
           <a className="text-[#8d9e0e67]">A reciclagem de materiais como papel, 
             plástico e metal reduz a necessidade de 
             extrair matérias-primas da Terra.</a>
         </div>
 
-        <div className="grid gap-1 text-center">
+        <div className="text-center">
+          <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
+          <a>Menor demanda por matérias-primas 
+            significa menos destruição de habitat 
+            e poluição que afeta a vida selvagem.</a>
+        </div>
+
+          <div className="text-center">
+          <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
+          <a>Menor demanda por matérias-primas 
+            significa menos destruição de habitat 
+            e poluição que afeta a vida selvagem.</a>
+        </div>
+
+            <div className="text-center">
           <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
           <a>Menor demanda por matérias-primas 
             significa menos destruição de habitat 
@@ -64,10 +81,11 @@ export default function Home() {
 
       </div>
 
+      </div>
+
     </div>
 
 
-=======
         <div className="w-full bg-[#D3DED6] py-20 ">
            <div className="bg-[#F9F9EB] m-auto w-[600] h-[250px] rounded-xl p-2" >
 
@@ -83,7 +101,6 @@ export default function Home() {
 
            </div>
         </div>
->>>>>>> d9d9bf23d3fbbee27516989abea531fb4bbd0f10
       </main>
 
       <footer>
