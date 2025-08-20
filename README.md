@@ -6,9 +6,9 @@ Projeto de tcc
 
 ## Tarefas
 - [ ] Desenvolver Testes
-- [ ] Conexão com o banco de dados
-- [ ] Criar o banco de dados
-- [ ] Desenvolver a base Da api
+- [x] Conexão com o banco de dados
+- [x] Criar o banco de dados
+- [x] Desenvolver a base Da api
 - [ ] Deselvolver todas as rotas da api
 - [ ] Desenvolver autenticação
 - [ ] Desenvolver telas do frontend
