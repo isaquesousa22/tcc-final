@@ -26,4 +26,5 @@ Projeto de tcc
 - [@isaquesousa22](https://www.github.com/isaquesousa22)
 - [@Btchboy](https://www.github.com/Btchboy)
 - [@HalliOliver](https://www.github.com/HalliOliver)
+- [@PedroBGuerra](https://www.github.com/PedroBGuerra)
 
