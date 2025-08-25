@@ -9,7 +9,7 @@ export default function Home() {
             <a>EcoSolutinos</a>
             <a href="">Home</a>
             <a href="">Services </a>
-            <a href="">Why recicle </a>
+            <a href="#serviço">Why recicle </a>
             <a href="">About Us </a>
           </div>
           <a href="" className="">
@@ -33,7 +33,7 @@ export default function Home() {
             <p className="mx-auto max-w-[700px] md:text-xl mt-4">Priorizamos em um futuro sustentável por meio de soluções inteligentes de reciclagem e gerenciamento de resíduos.</p>
 
           </div>
-          <button className="bg-[#D47156] w-[100] h-[50] border-2 border-solid  hover:bg-[#d47156c0]">
+          <button className=" shadow-xl bg-[#D47156] w-[150] h-[50] border-2 rounded-xl hover:bg-[#d47156c0] mt-1">
             Começar
           </button>
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
 
-      <div className="mx-auto items-start gap-8 my-30 2 md:gap-12">
+      <div id="serviço" className="mx-auto items-start gap-8 my-30 2 md:gap-12">
 
 
       <div className="grid grid-cols-4">
@@ -60,23 +60,27 @@ export default function Home() {
 
         <div className="text-center">
           <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
-          <a>Menor demanda por matérias-primas 
-            significa menos destruição de habitat 
-            e poluição que afeta a vida selvagem.</a>
+          <a>Menor demanda por matérias-
+            primas significa menos destruição
+            de habitat e poluição que afeta
+            a vida selvagem.</a>
         </div>
 
           <div className="text-center">
-          <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
-          <a>Menor demanda por matérias-primas 
-            significa menos destruição de habitat 
-            e poluição que afeta a vida selvagem.</a>
+          <p className="font-bold text-[#080808] ">Reduzir o desperdício em 
+            aterros sanitários</p>
+          <a>Cada item reciclado é um item a
+             menos em um aterro sanitário, 
+             combatendo a contaminação do solo 
+             e da água.</a>
         </div>
 
             <div className="text-center">
-          <p className="font-bold text-[#080808] ">Proteger Ecossistemas</p>
-          <a>Menor demanda por matérias-primas 
-            significa menos destruição de habitat 
-            e poluição que afeta a vida selvagem.</a>
+          <p className="font-bold text-[#080808] ">Economize energia</p>
+          <a>A fabricação de produtos a partir de 
+            materiais reciclados normalmente 
+            requer significativamente menos 
+            energia do que a fabricação de novos.</a>
         </div>
 
       </div>
@@ -87,19 +91,39 @@ export default function Home() {
 
 
         <div className="w-full bg-[#D3DED6] py-20 ">
-           <div className="bg-[#F9F9EB] m-auto w-[600] h-[250px] rounded-xl p-2" >
+           <div className="shadow-xl/20 bg-[#F9F9EB] m-auto w-[670] h-[300px] rounded-xl p-2 justify-items-center" >
 
 
-            <h1 className="text-center font-bold ">Our Services</h1>
-            <h2 className="py-4">Don't know what to do with your old electronics or bulky items? We can help.</h2>
+            <h1 className="text-center font-bold mt-1">Nossos Serviços</h1>
+            <h2 className=" text-center py-4">Não sabe o que fazer com seus eletrônicos antigos ou itens volumosos? Podemos ajudar.</h2>
 
-            <p className="text-justify py-3">Our platform helps you find the right place and method to dispose of your items responsibly. From a broken microwave to an old computer, we connect you with local centers equipped to handle your specific recycling needs.</p>
+            <p className="text-center py-3">Nossa plataforma ajuda você a encontrar o local e o método certos para descartar seus itens de forma 
+              responsável. De um micro-ondas quebrado a um computador antigo, conectamos você a centros locais 
+              equipados para atender às suas necessidades específicas de reciclagem.</p>
 
-            <button className="bg-[#D47156] w-[115] h-[50] rounded-xl">
-            Find Disposal Locations 
+            <button className="shadow-xl bg-[#D47156] w-[150] h-[50] border-2 rounded-xl hover:bg-[#d47156c0] mt-1">
+             <a >Encontre locais de descarte</a>
             </button>
 
-           </div>
+        </div>
+        </div>
+
+        <div className="w-full py-80 bg-[#F5F5DB]">
+          <h1 className="text-[#000] text-center text-5xl font-Merriweather mb-5 ">Localizador de Reciclagem</h1>
+          <p className="text-center">Insira o material que deseja reciclar e sua localização para encontrar as melhores opções de descarte
+             perto de você.</p>
+             
+             <div className="shadow-xl/20 mt-10 bg-[#F9F9EB] m-auto w-[670] h-[300px] rounded-xl p-2 justify-items-center" >
+
+
+            <h1 className="text-left">Material para Reciclar</h1>
+
+            <input type="text" placeholder="Por exemplo, garrafas plásticas, laptop antigo" className="input input-lg w-125 h-10 rounded-xl" />
+            
+
+
+
+        </div>
         </div>
       </main>
 
