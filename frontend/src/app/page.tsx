@@ -1,7 +1,11 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { Leaf, MapPin, Store } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const navegacao= useRouter()
   return (
     <div>
       <header className="p-5 bg-[#F5F5DC]">
@@ -43,7 +47,7 @@ export default function Home() {
 
 
         <div className="flex flex-col items-center justify-center text-center space-y-4"> 
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Por que a reciclagem é importante</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Por que a reciclagem é importante 🤔</h1>
           <p className="text-[#7C997E] font-sans mb-35">A reciclagem é uma das maneiras mais fáceis e eficazes de proteger o nosso planeta. Ela conserva recursos, economiza energia e reduz a poluição.</p>
       </div>
 
@@ -91,48 +95,58 @@ export default function Home() {
     </div>
 
 
-        <div id="serviço" className="w-full bg-[#D3DED6] py-20 ">
-           <div className="shadow-xl/20 bg-[#F9F9EB] m-auto w-[670] h-[300px] rounded-xl p-2 justify-items-center" >
 
-
-            <h1  className="text-center font-bold mt-1 font-sans text-2xl">Nossos Serviços</h1>
-            <h2 className=" text-center py-4">Não sabe o que fazer com seus eletrônicos antigos ou itens volumosos? Podemos ajudar.</h2>
-
-            <p className="text-center py-3 font-sans">Nossa plataforma ajuda você a encontrar o local e o método certos para descartar seus itens de forma 
-              responsável. De um micro-ondas quebrado a um computador antigo, conectamos você a centros locais 
-              equipados para atender às suas necessidades específicas de reciclagem.</p>
-
-            <button className="shadow-xl bg-[#D47156] w-[150] h-[50] border-2 rounded-xl hover:bg-[#d47156c0] mt-1">
-             <a >Encontre locais de descarte</a>
-            </button>
-
-        </div>
-        </div>
-
-        <div className="w-full py-35 bg-[#F5F5DB]">
-          <h1 className="text-[#000] text-center text-5xl font-extrabold mb-5 ">Localizador de Reciclagem</h1>
-          <p className="text-center font-sans">Insira o material que deseja reciclar e sua localização para encontrar as melhores opções de descarte
-             perto de você.</p>
-             
-             <div className="shadow-xl/20 mt-10 bg-[#F9F9EB] m-auto w-[670] h-[300] rounded-xl p-2 " >
-
-
-            <h1 className="text-left py-3 font-sans">Material para Reciclar</h1>
-
-            <input type="text" placeholder="  Por exemplo, garrafas plásticas, laptop antigo" className="input input-lg w-162 h-10 rounded-xl input input-neutral mb-1" />
-
-            <h2 className="text-left py-3 font-sans">Sua localização</h2>
+        <div  id="serviço" className="w-full py-35 bg-[#5D8569]">
+         
             
-            <input type="text" placeholder="  por exemplo, cidade, código postal" className="mt-1 input input-lg w-162 h-10 rounded-xl input input-neutral" /><br />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto my-16">
+              <div className="border-[#00000027] backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-[#d97706]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-[#d97706]" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Encontre Pontos</h3>
+                <p className="text-muted-foreground text-sm">
+                  Localize o ponto de descarte mais próximo de você
+                </p>
+              </div>
 
-            <button className="shadow-xl bg-[#3E704D] w-[650] h-[40] border-2 rounded-xl hover:bg-[#3e704dad] mt-4">
-             <a >Encontre locais de descarte</a>
-            </button>
-            
+              <div className="backdrop-blur-sm border-[#00000027] border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-[#374151]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Store className="w-6 h-6 text-[#374151]" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Seja um Ponto</h3>
+                <p className="text-muted-foreground text-sm">
+                  Cadastre seu estabelecimento como ponto de coleta
+                </p>
+              </div>
+
+              <div className="backdrop-blur-sm border-[#00000027] border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-[#d97706]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="w-6 h-6 text-[#d97706]" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Impacto Positivo</h3>
+                <p className="text-muted-foreground text-sm">
+                  Contribua para um futuro mais sustentável
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-12">
+
+              <button
+                className="bg-[#3E704D] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#3E704D] transition duration-500 hover:scale-105"
+              >
+                Encontre Pontos de Descarte
+                </button>
+
+                <button onClick={() =>  navegacao.push("/cadastrar_ponto")} className="bg-[#374151] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
+                Ser Um Ponto de Descarte
+              </button>
+
+            </div>
 
 
-
-        </div>
+       
         </div>
       </main>
 
