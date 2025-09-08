@@ -11,7 +11,7 @@ Projeto de tcc
 - [x] Desenvolver a base Da api
 - [ ] Deselvolver todas as rotas da api
 - [ ] Desenvolver autenticação
-- [ ] Desenvolver telas do frontend
+- [x] Desenvolver telas do frontend
 - [ ] Conectar o frontend no backend
 
 ## Stack utilizada
