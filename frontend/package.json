@@ -9,7 +9,6 @@
     "lint": "next lint",
     "format": "biome format ./scr/* --write",
     "empresa": "json-server --watch db.json"
-
   },
   "dependencies": {
     "lucide": "^0.542.0",
