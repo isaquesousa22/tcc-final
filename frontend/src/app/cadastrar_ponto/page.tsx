@@ -106,7 +106,7 @@ export default function CadastrarPonto() {
               <input
                 id="endereco"
                 type="text"
-                placeholder="Rua, número, bairro, cidade - estado"
+                placeholder="Rua, número, bairro"
                 value={formData.endereco}
                 onChange={(e) => handleChange("endereco", e.target.value)}
                 required
