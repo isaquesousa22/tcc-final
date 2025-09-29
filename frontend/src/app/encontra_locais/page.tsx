@@ -1,5 +1,6 @@
 "use client";
-import { Leaf, MapPin, Store, ArrowLeft, Search, Phone, Clock } from "lucide-react";
+
+import { MapPin, Store, Phone, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const bairros = [
@@ -16,8 +17,18 @@ const bairros = [
   "Moema",
 ];
 
+
+type Ponto = {
+  nome: string;
+  telefone: string;
+  endereco: string;
+  email: string;
+  horario: string;
+  descricao: string;
+};
+
 export default function Check() {
-  const [pontos, setPontos] = useState([]);
+  const [pontos, setPontos] = useState<Ponto[]>([]);
   const [bairroSelecionado, setBairroSelecionado] = useState("");
 
   useEffect(() => {
@@ -75,22 +86,24 @@ export default function Check() {
             >
               <h3 className="text-xl font-semibold flex items-center gap-2 mb-2">
                 <Store className="w-5 h-5 text-gray-600" />
-                {ponto.nome}
+                {ponto.nome || "Nome não preenchido"}
               </h3>
               <p className="flex items-center gap-2 text-sm text-gray-700">
                 <MapPin className="w-4 h-4" />
-                {ponto.endereco }
+                {ponto.telefone || "Telefone não preenchido"}
               </p>
               <p className="flex items-center gap-2 text-sm text-gray-700">
                 <Phone className="w-4 h-4" />
-                {ponto.telefone}
+                {ponto.endereco || "Endereço não preenchido"}
               </p>
               <p className="flex items-center gap-2 text-sm text-gray-700">
                 <Clock className="w-4 h-4" />
-                {ponto.horario}
+                {ponto.horario || "Horário não preenchido"}
               </p>
               {ponto.descricao && (
-                <p className="mt-2 text-sm italic text-gray-600">"{ponto.descricao}"</p>
+                <p className="mt-2 text-sm italic text-gray-600">
+                  "{ponto.descricao}"
+                </p>
               )}
             </div>
           ))}
