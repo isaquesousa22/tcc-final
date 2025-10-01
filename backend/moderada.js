@@ -49,7 +49,7 @@ const start = async () => {
   try {
     await fastify.listen({ port: 3000 });
     await fastify.ready();
-    fastify.log.info(`Servidor rodando em http://localhost:3000`);
+    fastify.log.info(`Servidor rodando em http://localhost:3001`);
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);

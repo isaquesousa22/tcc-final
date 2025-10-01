@@ -34,7 +34,7 @@ export default function Check() {
   useEffect(() => {
     const fetchPontos = async () => {
       try {
-        const res = await fetch("http://localhost:3000/empresa");
+        const res = await fetch("http://localhost:3001/empresa");
         const data = await res.json();
         console.log("Dados recebidos:", data);
         setPontos(data);
