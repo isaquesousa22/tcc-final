@@ -3,7 +3,8 @@ const mysql = require('mysql2/promise');
 
 const dbConfig = {
   host: 'localhost',
-  user: 'zazaki',
+  user: 'root',
+  server: '127.0.0.1',
   password: '',
   database: 'empresa_db',
 };
@@ -47,7 +48,7 @@ fastify.register(async function (fastifyInstance) {
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 });
+    await fastify.listen({ port: 3001 });
     await fastify.ready();
     fastify.log.info(`Servidor rodando em http://localhost:3001`);
   } catch (err) {
