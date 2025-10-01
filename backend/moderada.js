@@ -1,5 +1,7 @@
 const fastify = require('fastify')({ logger: true });
 const mysql = require('mysql2/promise');
+const cors = require('@fastify/cors')
+
 
 const dbConfig = {
   host: 'localhost',
@@ -10,6 +12,8 @@ const dbConfig = {
 };
 
 let connection;
+
+fastify.register(cors,{methods:"*", allowedHeaders:"*", origin:"*"})
 
 fastify.register(async function (fastifyInstance) {
   connection = await mysql.createConnection(dbConfig);
