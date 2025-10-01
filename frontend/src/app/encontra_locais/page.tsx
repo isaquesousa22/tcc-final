@@ -52,6 +52,17 @@ export default function Check() {
       )
     : pontos;
 
+
+    const handleLocalizarNoMapa = () => {
+      if (pontosFiltrados.length > 0) {
+        const endereco = encodeURIComponent(pontosFiltrados[0].endereco);
+        window.open(`https://www.google.com/maps/search/?api=1&query=${endereco}`, "_blank");
+      } else {
+        alert("Nenhum local encontrado.");
+      }
+    };
+  
+
   return (
     <main className="min-h-screen bg-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -73,6 +84,12 @@ export default function Check() {
               </option>
             ))}
           </select>
+        </div>
+
+        <div className="right-1.5">
+        <button  onClick={handleLocalizarNoMapa} className="  bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
+            localizar no mapa
+          </button>
         </div>
 
         <h2 className="text-2xl font-bold text-center mb-6">Locais de Descarte</h2>
