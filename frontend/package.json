@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "biome format ./scr/* --write"
+    "format": "biome format ./scr/app/* --write"
   },
   "dependencies": {
     "fastify": "^5.6.1",
