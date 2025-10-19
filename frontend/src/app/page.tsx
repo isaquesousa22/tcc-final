@@ -11,12 +11,17 @@ export default function Home() {
       <header className="p-5 bg-[#fdf3e6]">
         <nav className="flex justify-between">
           <div className="flex gap-5">
-            <a>EcoSolutions</a>
+            <a className="text-[#8ea579]">EcoSolutions</a>
 
-            <a href="#serviço">Services </a>
-            <a href="">Why recicle </a>
-            <a href="">About Us </a>
+            <a className="text-[#8ea579]" href="#serviço">Services </a>
+            <a className="text-[#8ea579]"  href="">Why recicle </a>
+            <a className="text-[#8ea579]"  href="">About Us </a>
+           <Link className="text-[#8ea579]" href="/blog">Blog</Link>
+
+            
           </div>
+
+        
 
           <button className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
             Quiz
@@ -88,13 +93,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-12">
 
             <button onClick={() => navegacao.push("/encontra_locais")}
-              className="bg-[#47573c] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#3E704D] transition duration-500 hover:scale-105"
+              className="mb-3 bg-[#47573c] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#3E704D] transition duration-500 hover:scale-105"
             >
               Encontre Pontos de Descarte
             </button>
 
             <button onClick={() => navegacao.push("/cadastrar_ponto")}
-              className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
+              className="mb-3 bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
               Ser Um Ponto de Descarte
             </button>
 

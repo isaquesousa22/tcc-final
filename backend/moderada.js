@@ -31,7 +31,7 @@ fastify.register(async function (fastifyInstance) {
     )
   `);
 
-  // POST /empresa - Cadastra um novo ponto
+
   fastifyInstance.post('/empresa', async (request, reply) => {
     const { nome, telefone, endereco, email, horario, descricao } = request.body;
 
@@ -43,7 +43,7 @@ fastify.register(async function (fastifyInstance) {
     reply.send({ id: result.insertId, nome, telefone, endereco, email, horario, descricao });
   });
 
-  // GET /empresa - Lista todos os pontos
+
   fastifyInstance.get('/empresa', async (request, reply) => {
     const [rows] = await connection.execute('SELECT * FROM users');
     reply.send(rows);
