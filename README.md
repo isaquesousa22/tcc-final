@@ -10,9 +10,9 @@ Projeto de tcc
 - [x] Criar o banco de dados
 - [x] Desenvolver a base Da api
 - [ ] Deselvolver todas as rotas da api
-- [ ] Desenvolver autenticação
+- [x] Desenvolver autenticação
 - [x] Desenvolver telas do frontend
-- [ ] Conectar o frontend no backend
+- [x] Conectar o frontend no backend
 
 ## Stack utilizada
 

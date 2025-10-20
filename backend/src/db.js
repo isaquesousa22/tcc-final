@@ -1,13 +1,10 @@
-const fastify = require('fastify')({ logger: true });
 const mysql = require('mysql2/promise');
-const cors = require('@fastify/cors')
-
 
 const db = mysql.createConnection( {
   host: 'localhost',
   user: 'root',
   server: '127.0.0.1',
-  password: '',
+  password: '12345',
   database: 'empresa_db',
 });
 
