@@ -1,6 +1,5 @@
-const mysql = require('mysql2/promise');
-
-const db = mysql.createConnection( {
+import mysql from "mysql2/promise"
+export const db = mysql.createConnection( {
   host: 'localhost',
   user: 'root',
   server: '127.0.0.1',
