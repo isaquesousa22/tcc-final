@@ -22,7 +22,7 @@ export default function CadastrarPonto() {
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     console.log("Cadastrar ponto:", formData);
-    await fetch("http://localhost:3001/empresa",{method:"POST",body:JSON.stringify(formData), headers:{"Content-Type":"application/json"}})
+    await fetch("http://localhost:3001/register",{method:"POST",body:JSON.stringify(formData), headers:{"Content-Type":"application/json"}})
     alert(
       "Ponto cadastrado com sucesso! Você receberá um email de confirmação em até 48 horas."
     );

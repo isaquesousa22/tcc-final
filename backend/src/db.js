@@ -1,5 +1,6 @@
 import mysql from "mysql2/promise"
-export const db = mysql.createConnection( {
+
+export const db = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
   server: '127.0.0.1',
@@ -7,8 +8,9 @@ export const db = mysql.createConnection( {
   database: 'empresa_db',
 });
 
-db.connection(err=>{
-  if(err)throw err;
+db.connect(err => {
+  if (err) console.log(err);
   console.log("Conectando ao mysql")
 })
+
 

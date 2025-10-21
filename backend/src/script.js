@@ -15,4 +15,4 @@ async function registrar() {
   });
 
   document.getElementById("mensagem").innerText = await res.text();
-}cd 
+}
