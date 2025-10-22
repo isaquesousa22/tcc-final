@@ -23,7 +23,8 @@ export default function Home() {
 
         
 
-          <button className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
+          <button onClick={() => navegacao.push("/quiz")}
+           className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
             Quiz
           </button>
         </nav>
