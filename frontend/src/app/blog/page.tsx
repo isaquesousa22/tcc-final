@@ -35,7 +35,7 @@ export default function BlogPage() {
 
            <div className="flex gap-5">
             <a className="text-[#8ea579]" >EcoSolutions</a>
-             <Link className="text-[#8ea579]" href="/src\app">Home</Link>
+            <Link className="text-[#8ea579]" href="/">Home</Link>
             </div>
             </nav>
 
