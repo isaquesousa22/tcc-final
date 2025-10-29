@@ -46,10 +46,6 @@ export default function Home() {
               A reciclagem é uma das maneiras mais fáceis e eficazes de proteger o nosso planeta. Ela conserva recursos, economiza energia e reduz a poluição.</p>
           </div>
 
-
-          <button className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
-            Começar
-          </button>
         </div>
 
 
