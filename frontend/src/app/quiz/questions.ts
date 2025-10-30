@@ -17,7 +17,7 @@ export const questions: QuestionData[] = [
     answer: ["r?"],
   },
   {
-    questions: ["Questão 4"],
+    questions: ["Questão 4:  Aonde descarta pilhas eletronicas "],
     options: ["r1", "r2", "r3", "r4"],
     answer: ["r?"],
   },

@@ -1,7 +1,9 @@
 "use client";
 
-import { MapPin, Store, Phone, Clock } from "lucide-react";
+import { MapPin, Store, Phone, Clock,  } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 const bairros = [
   "Brooklin",
@@ -28,6 +30,7 @@ type Ponto = {
 };
 
 export default function Check() {
+  const navegacao = useRouter()
   const [pontos, setPontos] = useState<Ponto[]>([]);
   const [bairroSelecionado, setBairroSelecionado] = useState("");
 
@@ -65,13 +68,26 @@ export default function Check() {
   
 
   return (
-    <main className="min-h-screen bg-white py-12 px-4">
+    <main>
+      <header>
+        <nav>
+          <div>
+          <button
+        onClick={() => navegacao.push("/")}
+        className="bg-[#8ea579]  text-white px-6 py-2 mt-4 ml-4 rounded-xl hover:bg-purple-700 transition-transform duration-300 ease-in-out hover:scale-105"
+      >
+       Ecosolutions
+      </button>
+          </div>
+        </nav>
+      </header>
+      <div className="min-h-screen bg-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="py-10 text-3xl font-bold text-gray-900 text-center sm:text-5xl">
           Escolha sua região
         </h1>
 
-        {/* Dropdown */}
+       
         <div className="flex justify-center mb-10">
           <select
             value={bairroSelecionado}
@@ -120,13 +136,14 @@ export default function Check() {
               )}
               
         <div className="right-1.5">
-        <button  onClick={() => handleLocalizarNoMapa(pontosFiltrados[index].endereco)} className="  bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
+        <button  onClick={() => handleLocalizarNoMapa(pontosFiltrados[index].endereco)} className="  bg-[#424852] p-3 border mt-3 border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105">
             localizar no mapa
           </button>
         </div>
             </div>
           ))}
         </div>
+      </div>
       </div>
     </main>
   );
