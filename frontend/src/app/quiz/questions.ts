@@ -18,37 +18,23 @@ export const questions: QuestionData[] = [
   },
   {
     questions: ["Questão 4:  Aonde descarta pilhas eletronicas "],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
+    options: ["No lixo comum", "No quintal de casa", "Em pontos de coleta específicos ou em lojas que recebem pilhas usadas", "No vaso sanitário."],
+    answer: ["Em pontos de coleta específicos ou em lojas que recebem pilhas usadas"],
   },
   {
-    questions: ["Questão 5"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
+    questions: ["Quem é responsável pelo descarte correto de equipamentos eletrônicos?"],
+    options: ["Somente o governo", "Somente as empresas", "Todos: consumidores, empresas e governo", "Ninguém"],
+    answer: ["Todos: consumidores, empresas e governo"],
   },
   {
-    questions: ["Questão 6"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
+    questions: ["Qual é uma boa prática para reduzir a quantidade de lixo eletrônico?"],
+    options: ["Trocar de celular todo ano", "Fazer manutenção e prolongar o uso dos aparelhos", "Jogar fora quando riscar a tela", "Queimar os aparelhos velhos"],
+    answer: ["Fazer manutenção e prolongar o uso dos aparelhos"],
   },
   {
-    questions: ["Questão 7"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
+    questions: ["Qual das alternativas representa uma prática sustentável na gestão de resíduos eletrônicos em larga escala?"],
+    options: ["Incentivar o descarte em lixões controlados", "Promover centros de recondicionamento e reuso de equipamentos eletrônicos", "Substituir equipamentos sem considerar sua vida útil", "Exportar resíduos para países com reciclagem mais barata"],
+    answer: ["Promover centros de recondicionamento e reuso de equipamentos eletrônicos"],
   },
-  {
-    questions: ["Questão 8"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
-  },
-  {
-    questions: ["Questão 9"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
-  },
-  {
-    questions: ["Questão 10"],
-    options: ["r1", "r2", "r3", "r4"],
-    answer: ["r?"],
-  },
+
 ];

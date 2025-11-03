@@ -15,7 +15,7 @@ export default function Home() {
 
             <a className="text-[#8ea579]" href="#serviço">Services </a>
             <a className="text-[#8ea579]"  href="">Why recicle </a>
-            <a className="text-[#8ea579]"  href="">About Us </a>
+            <a className="text-[#8ea579]"  href="#sobre nos">About Us </a>
            <Link className="text-[#8ea579]" href="/blog">Blog</Link>
 
             
@@ -160,8 +160,54 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
+      <footer id="sobre nos" className="bg-[#a7b996]">
+      <div className="max-w-7xl mx-auto  px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
 
+{/* Coluna 1 - Logo e descrição */}
+<div>
+  <h2 className="text-2xl font-bold mb-3 text-[#fff5e9]">EcoSolutions</h2>
+  <p className="text-sm text-[#d1d5db]">
+    Conectando pessoas e empresas para um planeta mais limpo e sustentável.
+    Reciclar é um pequeno gesto com um grande impacto.
+  </p>
+</div>
+
+{/* Coluna 2 - Links rápidos */}
+<div>
+  <h3 className="text-lg font-semibold mb-3">Links Rápidos</h3>
+  <ul className="space-y-2 text-sm">
+    <li><Link href="/" className="hover:text-[#c2e0b9] transition">Início</Link></li>
+    <li><a href="#serviço" className="hover:text-[#c2e0b9] transition">Serviços</a></li>
+    <li><Link href="/blog" className="hover:text-[#c2e0b9] transition">Blog</Link></li>
+    
+  </ul>
+</div>
+
+{/* Coluna 3 - Contato */}
+<div>
+  <h3 className="text-lg font-semibold mb-3">Contato</h3>
+  <ul className="text-sm space-y-2">
+    <li>📍 São Paulo, Brasil</li>
+    <li>📧 contato@ecosolutions.com</li>
+    <li>📞 (11) 98765-4321</li>
+  </ul>
+</div>
+
+{/* Coluna 4 - Redes sociais */}
+<div>
+  <h3 className="text-lg font-semibold mb-3">Siga-nos</h3>
+  <div className="flex space-x-4">
+    <a href="#" className="hover:text-[#c2e0b9] transition">🌿 Instagram</a>
+    <a href="#" className="hover:text-[#c2e0b9] transition">🌎 LinkedIn</a>
+  </div>
+</div>
+
+</div>
+
+{/* Linha inferior */}
+<div className="border-t border-[#6b7c62] text-center py-4 text-sm text-[#d1d5db]">
+© {new Date().getFullYear()} EcoSolutions. Todos os direitos reservados.
+</div>
       </footer>
     </div>
   );
