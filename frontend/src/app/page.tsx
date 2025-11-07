@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* ---------------- HEADER ---------------- */}
+
       <header className="p-5 bg-[#fdf3e6]">
         <nav className="flex justify-between items-center">
           <div className="flex gap-5">
