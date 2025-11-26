@@ -1,5 +1,5 @@
 "use client"
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { ArrowLeft, Clock, Mail, MapPin, Phone, Store } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -130,6 +130,37 @@ export default function CadastrarPonto() {
                   className="w-full border border-[#b3b3b3] rounded-[0.3rem] p-1"
                 />
               </div>
+                    <div className="space-y-2">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  Senha
+                </p>
+                <input
+                  id="senha"
+                  type="senha"
+                  placeholder="*******"
+                  value={formData.telefone}
+                  onChange={(e) => handleChange("senha", e.target.value)}
+                  required
+                  className="w-full border border-[#b3b3b3] rounded-[0.3rem] p-1"
+                />
+              </div>
+            </div>
+               <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                Endereço completo
+              </p>
+              <input
+                id="endereco"
+                type="text"
+                placeholder="Rua, número, bairro"
+                value={formData.endereco}
+                onChange={(e) => handleChange("endereco", e.target.value)}
+                required
+                className="w-full border border-[#b3b3b3] rounded-[0.3rem] p-1"
+              />
+            </div>
               <div className="space-y-2">
                 <p className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />

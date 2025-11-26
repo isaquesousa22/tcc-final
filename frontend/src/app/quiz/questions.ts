@@ -8,7 +8,7 @@ export const questions: QuestionData[] = [
   {
     question: "A EcoSolutions recicla todo tipo de lixo eletrônico?",
     options: ["Sim", "Não", "Quase todos", "Só lixos específicos"],
-    answer: "Sim",
+    answer: "Não",
   },
   {
     question:
