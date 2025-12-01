@@ -7,15 +7,15 @@ import { useAuth } from "@/app/context/AuthContext";
 
 export default function Login() {
   const navegacao = useRouter();
-  const { login } = useAuth(); 
+  const { login } = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
     senha: "",
   });
 
-  function handleChange(campo: string, valor: string) {
-    setFormData({ ...formData, [campo]: valor });
+  function handleChange(field: string, value: string) {
+    setFormData((prev) => ({ ...prev, [field]: value }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -34,10 +34,9 @@ export default function Login() {
       return;
     }
 
-
+   
     login(data);
 
-    // 🔥 redireciona para home
     navegacao.push("/");
   }
 
@@ -45,14 +44,13 @@ export default function Login() {
     <main>
       <header>
         <nav>
-          <div>
-            <button
-              onClick={() => navegacao.push("/")}
-              className="bg-purple-600 text-white px-6 py-2 mt-4 ml-4 rounded-xl hover:bg-purple-700 transition-transform duration-300 ease-in-out hover:scale-105"
-            >
-              <ArrowLeft size={20} />
-            </button>
-          </div>
+          <button
+            onClick={() => navegacao.push("/")}
+            className="bg-purple-600 text-white px-6 py-2 mt-4 ml-4 rounded-xl 
+              hover:bg-purple-700 transition-transform duration-300 ease-in-out hover:scale-105"
+          >
+            <ArrowLeft size={20} />
+          </button>
         </nav>
       </header>
 
@@ -66,10 +64,10 @@ export default function Login() {
 
         <form onSubmit={handleSubmit}>
           <div className="space-y-5">
+
             <div className="space-y-2">
               <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                Email
+                <Mail className="w-4 h-4" /> Email
               </p>
               <input
                 type="email"
@@ -83,8 +81,7 @@ export default function Login() {
 
             <div className="space-y-2">
               <p className="flex items-center gap-2">
-                <Lock className="w-4 h-4" />
-                Senha
+                <Lock className="w-4 h-4" /> Senha
               </p>
               <input
                 type="password"
@@ -102,6 +99,7 @@ export default function Login() {
             >
               Entrar
             </button>
+
           </div>
         </form>
       </div>

@@ -11,55 +11,62 @@ export default function Home() {
   return (
     <div>
 
-      <header className="p-5 bg-[#fdf3e6]">
-        <nav className="flex justify-between items-center">
-          <div className="flex gap-5">
-            <a className="text-[#8ea579] font-bold">EcoSolutions</a>
+    <header className="p-5 bg-[#fdf3e6]">
+  <nav className="flex justify-between items-center">
+    <div className="flex gap-5">
+      <a className="text-[#8ea579] font-bold">EcoSolutions</a>
 
-            <a className="text-[#8ea579]" href="#servico">
-              Services
-            </a>
-            <a className="text-[#8ea579]" href="#why-recycle">
-              Why Recycle
-            </a>
-            <a className="text-[#8ea579]" href="#sobre-nos">
-              About Us
-            </a>
-            <Link className="text-[#8ea579]" href="/blog">
-              Blog
-            </Link>
-          </div>
+      <a className="text-[#8ea579]" href="#servico">Services</a>
+      <a className="text-[#8ea579]" href="#why-recycle">Why Recycle</a>
+      <a className="text-[#8ea579]" href="#sobre-nos">About Us</a>
+
+      <Link className="text-[#8ea579]" href="/blog">
+        Blog
+      </Link>
+    </div>
+
+    <div className="flex gap-4">
+
+  
+      <button
+        onClick={() => navegacao.push("/quiz")}
+        className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105"
+      >
+        Quiz
+      </button>
+
+     
+      {!user && (
+        <button
+          onClick={() => navegacao.push("/login")}
+          className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105"
+        >
+          Login
+        </button>
+      )}
+
+     
+      {user && (
+        <>
+          <button
+            onClick={() => navegacao.push("/editar-senha")}
+            className="bg-green-600 p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-green-700 transition duration-500 hover:scale-105"
+          >
+            Perfil
+          </button>
 
           <button
-            onClick={() => navegacao.push("/quiz")}
-            className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105"
+            onClick={logout}
+            className="bg-red-600 p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-red-700 transition duration-500 hover:scale-105"
           >
-            Quiz
+            Sair
           </button>
-          {user ? (
-          <div className="flex gap-4 items-center">
-              <Link href="/perfil" className="text-[#8ea579] font-bold">
-                  Meu Perfil
-              </Link>
+        </>
+      )}
 
-            <button
-               onClick={logout}
-               className="bg-red-600 p-3 rounded-xl text-white hover:bg-red-700"
-              >
-                  Sair
-            </button>
-          </div>
-          ) : (
-         <button
-            onClick={() => navegacao.push("/login")}
-            className="bg-[#424852] p-3 rounded-xl text-white hover:bg-[#374151]"
-          >
-                 Login
-          </button>
-          )}
-
-        </nav>
-      </header>
+    </div>
+  </nav>
+</header>
 
  
       <main>
