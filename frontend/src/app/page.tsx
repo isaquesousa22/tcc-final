@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { Leaf, MapPin, Store } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function Home() {
   const navegacao = useRouter();
+  const { user, logout } = useAuth();
 
   return (
     <div>
@@ -34,12 +36,28 @@ export default function Home() {
           >
             Quiz
           </button>
-           <button
-            onClick={() => navegacao.push("/quiz")}
-            className="bg-[#424852] p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-[#374151e0] transition duration-500 hover:scale-105"
+          {user ? (
+          <div className="flex gap-4 items-center">
+              <Link href="/perfil" className="text-[#8ea579] font-bold">
+                  Meu Perfil
+              </Link>
+
+            <button
+               onClick={logout}
+               className="bg-red-600 p-3 rounded-xl text-white hover:bg-red-700"
+              >
+                  Sair
+            </button>
+          </div>
+          ) : (
+         <button
+            onClick={() => navegacao.push("/login")}
+            className="bg-[#424852] p-3 rounded-xl text-white hover:bg-[#374151]"
           >
-            Login
+                 Login
           </button>
+          )}
+
         </nav>
       </header>
 

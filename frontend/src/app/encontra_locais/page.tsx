@@ -32,7 +32,7 @@ export default function Check() {
 
   const [pontos, setPontos] = useState<Ponto[]>([]);
   const [bairroSelecionado, setBairroSelecionado] = useState("");
-  const [bairros, setBairros] = useState<string[]>(bairrosFixos); 
+  const [bairros, setBairros] = useState<any[]>(bairrosFixos);
 
   useEffect(() => {
     const fetchPontos = async () => {
@@ -41,9 +41,11 @@ export default function Check() {
         const data = await res.json();
         console.log("Dados recebidos:", data);
 
+
+        
         setPontos(data);
 
-
+       
         const bairrosNovos = Array.from(
           new Set(
             data.map((p: Ponto) => {
@@ -53,7 +55,7 @@ export default function Check() {
           )
         );
 
-      
+  
         const todosBairros = Array.from(
           new Set([...bairrosFixos, ...bairrosNovos])
         );
@@ -75,6 +77,7 @@ export default function Check() {
 
   const handleLocalizarNoMapa = (localizacao: string) => {
     if (!localizacao) return alert("Endereço inválido.");
+
     const endereco = encodeURIComponent(localizacao);
     window.open(
       `https://www.google.com/maps/search/?api=1&query=${endereco}`,
@@ -101,7 +104,7 @@ export default function Check() {
             Escolha sua região
           </h1>
 
-        
+          {/* FILTRO */}
           <div className="flex justify-center mb-10">
             <select
               value={bairroSelecionado}
@@ -109,8 +112,7 @@ export default function Check() {
               className="p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
             >
               <option value="">Todos os bairros</option>
-
-              {bairros.sort().map((bairro) => (
+              {[...bairros].sort().map((bairro) => (
                 <option key={bairro} value={bairro}>
                   {bairro}
                 </option>
@@ -123,9 +125,9 @@ export default function Check() {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {pontosFiltrados.map((ponto, index) => (
+            {pontosFiltrados.map((ponto) => (
               <div
-                key={index}
+                key={ponto.nome + ponto.endereco}
                 className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow hover:shadow-md transition"
               >
                 <h3 className="text-xl font-semibold flex items-center gap-2 mb-2">

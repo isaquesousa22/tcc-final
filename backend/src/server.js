@@ -65,23 +65,69 @@ app.post("/login", async (req, res) => {
     const [result] = await db.query(sql, [email]);
 
     if (result.length === 0)
-      return res.status(400).send("Usuário não encontrado");
+      return res.status(400).json({ erro: "Usuário não encontrado" });
 
     const user = result[0];
-
 
     const senhaCorreta = await bcrypt.compare(senha, user.senha);
 
     if (!senhaCorreta)
-      return res.status(401).send("Senha incorreta");
+      return res.status(401).json({ erro: "Senha incorreta" });
 
-    return res.send(`Bem-vindo, ${user.nome}!`);
+
+    // 🔥 devolve dados do usuário (sem senha)
+    return res.json({
+      id: user.id,
+      nome: user.nome,
+      telefone: user.telefone,
+      email: user.email,
+      endereco: user.endereco,
+      horario: user.horario,
+      descricao: user.descricao
+    });
 
   } catch (error) {
     console.error(error);
-    res.status(500).send("Erro ao processar login");
+    res.status(500).json({ erro: "Erro ao processar login" });
   }
 });
+
+app.put("/update-password", async (req, res) => {
+  const { email, senhaAtual, novaSenha } = req.body;
+
+  try {
+    //  Busca o usuário
+    const sql = "SELECT senha FROM usuarios WHERE email = ?";
+    const [result] = await db.query(sql, [email]);
+
+    if (result.length === 0)
+      return res.status(404).json({ erro: "Usuário não encontrado" });
+
+    const hashAtual = result[0].senha;
+
+    //  Compara senha atual
+    const confereSenha = await bcrypt.compare(senhaAtual, hashAtual);
+    if (!confereSenha)
+      return res.status(401).json({ erro: "Senha atual incorreta" });
+
+    //  Criptografa nova senha
+    const novaHash = await bcrypt.hash(novaSenha, 10);
+
+    //  Atualiza no MySQL
+    const sqlUpdate = `
+      UPDATE usuarios
+      SET senha = ?
+      WHERE email = ?
+    `;
+    await db.query(sqlUpdate, [novaHash, email]);
+
+    return res.json({ mensagem: "Senha atualizada com sucesso!" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ erro: "Erro ao alterar a senha" });
+  }
+});
+
 
 
 app.listen(3001, () =>
