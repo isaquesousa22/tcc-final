@@ -49,7 +49,7 @@ export default function Home() {
       {user && (
         <>
           <button
-            onClick={() => navegacao.push("/editar-senha")}
+            onClick={() => navegacao.push("/perfil")}
             className="bg-green-600 p-3 border border-[#22222248] rounded-[0.8rem] font-bold text-white hover:bg-green-700 transition duration-500 hover:scale-105"
           >
             Perfil

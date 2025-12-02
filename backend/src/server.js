@@ -92,6 +92,34 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.put("/editar_usuario", async (req, res) => {
+  const { id, nome, telefone, endereco, descricao } = req.body;
+
+  if (!id) {
+    return res.status(400).send("ID do usuário é obrigatório");
+  }
+
+  try {
+    const sql = `
+      UPDATE usuarios
+      SET nome = ?, telefone = ?, endereco = ?, descricao = ?
+      WHERE id = ?
+    `;
+
+    const [result] = await db.query(sql, [nome, telefone, endereco, descricao, id]);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).send("Usuário não encontrado");
+    }
+
+    return res.status(200).send("Usuário atualizado com sucesso");
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send("Erro ao atualizar usuário");
+  }
+});
+
+
 app.put("/update-password", async (req, res) => {
   const { email, senhaAtual, novaSenha } = req.body;
 

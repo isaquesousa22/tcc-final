@@ -4,8 +4,12 @@ import { createContext, useContext, useState, ReactNode } from "react";
 interface User {
   id: number;
   nome: string;
+  telefone: string;
   email: string;
+  endereco?: string;
+  descricao?: string;
 }
+
 
 interface AuthContextType {
   user: User | null;
